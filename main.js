@@ -1,1 +1,10 @@
-console.log("let's watch some bears")
+let bears = [
+    {
+        name: 
+        imgUrl:
+
+    },
+    {
+        
+    }
+]
