@@ -1,5 +1,5 @@
 import printToDom from "../helpers/utils.js"
-import bears from "../helpers/data/bearData.js"
+import bearData from "../helpers/data/bearData.js"
 
 const buildBears = (theRiver) => {
     let domString = '';
@@ -19,4 +19,4 @@ const buildBears = (theRiver) => {
         printToDom('#theRiver', domString);
   };
 
-  export default {buildBears}
+  export default { buildBears }
