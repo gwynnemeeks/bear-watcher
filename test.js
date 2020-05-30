@@ -23,8 +23,30 @@ let bearArray = [
     }
 ];
 
-const getBear = () => {
-    return bearArray;
-};
+const printToDom = (selector, textToPrint) => {
+    document.querySelector(selector).innerHTML = textToPrint;
+  };
 
-export default {getBear}
+const buildBears = (theRiver) => {
+    let domString = '';
+
+    for (let i = 0; i < theRiver.length; i++) {
+        domString += `
+    <div class="floating-card sortable">
+        <div class="card" style="width: 18rem;">
+            <img src="${theRiver[i].imgUrl}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">${theRiver[i].name}</h5>
+            </div>
+        </div>
+    </div> 
+        `;
+    }
+        printToDom('#theRiver', domString);
+  };
+
+  const init = () => {
+    buildBears (bearArray)
+}
+
+init ();

@@ -1,4 +1,4 @@
-import buildBears from "./components/river.js"
+import buildBears from "./components/theRiver.js"
 //bearForm
 
 
