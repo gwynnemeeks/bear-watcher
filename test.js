@@ -27,6 +27,25 @@ const printToDom = (selector, textToPrint) => {
     document.querySelector(selector).innerHTML = textToPrint;
   };
 
+const buildForm = (bearForm) => {
+    let domString = '';
+    {
+        domString += `
+        <form>
+            <div class="row">
+            <div class="col">
+                    <input type="text" class="form-control" placeholder="Bear Name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Image URL">
+            </div>
+            </div>
+        </form>
+        `
+    };
+    printToDom('#bearFrom', domString);
+};
+
 const buildBears = (theRiver) => {
     let domString = '';
 
@@ -46,7 +65,8 @@ const buildBears = (theRiver) => {
   };
 
   const init = () => {
-    buildBears (bearArray)
+    buildForm ();
+    buildBears (bearArray);
 }
 
 init ();
