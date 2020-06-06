@@ -1,24 +1,16 @@
 body {
     background-color: pink;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-#card {
-    display: flex;
-    flex-flow: row wrap;
-    
-}
-.floating-card {
-    float: left;
-    margin: 5px;
-    max-width: 300px;
-    
-}
-.card-img-top {
-    max-width: 300px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-}
-.card-title {
+.card {
+    display: inline-flex;
+    width: 35%;
+    margin: 15px;
+  }
+.card h2 {
     text-align: center;
+    padding: 1px 10px;
+  }
+#btn-primary {
+    background-color: purple;
 }
