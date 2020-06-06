@@ -1,22 +1,21 @@
-import printToDom from "../helpers/utils.js"
+import utils from "../helpers/utils.js"
 import bearData from "../helpers/data/bearData.js"
 
-const buildBears = (theRiver) => {
-    let domString = '';
+const makeCard = () => {
+  const newBear = bearData.getBear ()
+  let domstring = '';
 
-    for (let i = 0; i < theRiver.length; i++) {
-        domString += `
-    <div class="floating-card sortable">
-        <div class="card" style="width: 18rem;">
-            <img src="${theRiver[i].imgUrl}" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">${theRiver[i].name}</h5>
-            </div>
-        </div>
-    </div> 
-        `;
-    }
-        printToDom('#theRiver', domString);
-  };
+  for (let i = 0; i < newBear.length; i++) {
+    const bear = newBear[i];
+      domstring += `<div class="card">`
+      domstring += `<img class="card-img-top" src="${bear.imageUrl}" alt="Bear pics">`
+      domstring += `<class="card-body">`
+      domstring += `<h2 class="card-title">${bear.name}</h2>`
+      domstring += `</div>`
+      domstring += `</div>`
+  }
 
-  export default { buildBears }
+  utils.printToDom("#river", domstring)
+}
+
+export default { makeCard }

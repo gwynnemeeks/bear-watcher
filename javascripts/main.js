@@ -1,9 +1,7 @@
-import buildBears from "./components/theRiver.js"
-//bearForm
+import bearForm from "./components/bearForm.js"
 
+const init = () => {
+  bearForm.makeForm();
+}
 
-  const init = () => {
-      buildBears (bears)
-  }
-
-  init ();
+init ()
